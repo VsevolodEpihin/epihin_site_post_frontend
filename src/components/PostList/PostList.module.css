@@ -1,0 +1,15 @@
+.post{
+  padding: 10px 5px;
+  background-color: rgba(144, 86, 221, 0.925);
+  margin: 15px;
+  border-radius: 15px;
+  width: 40%;
+}
+
+.container{
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+}
