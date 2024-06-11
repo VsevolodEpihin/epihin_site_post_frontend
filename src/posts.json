@@ -1,0 +1,62 @@
+[{
+  "id": 2,
+  "title": "xcvxcv",
+  "text": "rtertet",
+  "imageUrl": null,
+  "user": {
+      "id": 1,
+      "login": "epishka21",
+      "email": "epishka21@mail.ru",
+      "imageUrl": null
+  },
+  "tags": [
+      {
+          "text": "tag1",
+          "id": 1
+      },
+      {
+          "text": "tag2",
+          "id": 2
+      }
+  ]
+},
+{
+  "id": 3,
+  "title": "xzczxc",
+  "text": "pupupupuppupupupuppupupupuppupupupuppupupupupupupupupuppupupupupppupupupupuppupupupupppupupupupuppupupupupppupupupupuppupupupupppupupuppupupupuppupupupuppupupupuppupupupupupupuppupupupuppupupupuppupupupuppupupupupupupuppupupupuppupupupuppupupupuppupupupupupupuppupupupuppupupupuppupupupuppupupu",
+  "imageUrl": null,
+  "user": {
+      "id": 1,
+      "login": "epishka21",
+      "email": "epishka21@mail.ru",
+      "imageUrl": null
+  },
+  "tags": [
+      {
+          "text": "tag2",
+          "id": 2
+      }
+  ]
+},
+{
+  "id": 4,
+  "title": "zxczqwewqeqwe",
+  "text": "234234",
+  "imageUrl": null,
+  "user": {
+      "id": 1,
+      "login": "epishka21",
+      "email": "epishka21@mail.ru",
+      "imageUrl": null
+  },
+  "tags": [
+      {
+          "text": "tag1",
+          "id": 1
+      },
+      {
+          "text": "tag2",
+          "id": 2
+      }
+  ]
+}]

@@ -1,0 +1,22 @@
+.header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgb(190, 177, 197);
+}
+
+.nav span{
+  margin: 0 5px;
+}
+
+.nav a{
+  font-size: 18px;
+  text-decoration: none;
+}
+
+a:hover{
+color: blueviolet;
+}
