@@ -1,5 +1,6 @@
 import { Posts } from '../../types';
 import Post from '../PostItem/PostItem';
+import PostNotFound from '../PostNotFound/PostNotFound';
 
 import styles from './PostList.module.css';
 
@@ -11,20 +12,17 @@ const PostList = ({ posts }: PostsListProps) => {
   return(
     <>
       <div className={styles.container}>
-        {posts.length === 0
-          ?
-          <div className={styles.boxNotFound}>Not Found Posts</div>
-          :
-          posts.map(post => (
-            <Post
-              key={post.id}
-              title={post.title}
-              text={post.text}
-              imageUrl={post.imageUrl}
-              user={post.user}
-              tags={post.tags}
-            />
-          ))}
+        {posts.length === 0 &&  <PostNotFound />}
+        {posts.map(post => (
+          <Post
+            key={post.id}
+            title={post.title}
+            text={post.text}
+            imageUrl={post.imageUrl}
+            user={post.user}
+            tags={post.tags}
+          />
+        ))}
       </div>
     </>
   );

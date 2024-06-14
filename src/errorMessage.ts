@@ -1,1 +1,1 @@
-export const errorMessage = "Sorry, an unexpected error occurred";
+export const errorMessage = "Посты не были загружены";

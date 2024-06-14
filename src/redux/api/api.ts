@@ -1,15 +1,5 @@
-import axios from 'axios';
-import { Dispatch } from 'redux';
+import axios from "axios";
 
-import { fetchPostsFail, fetchPostsSuccess } from '../actions/actionPosts';
-import { Posts } from '../../types';
-import { errorMessage } from '../../errorMessage';
+const api = axios.create({ baseURL: import.meta.env.VITE_API_URL });
 
-export const fetchPostsRequest = async (dispatch: Dispatch) => {
-  try {
-    const response = await axios.get<Posts[]>(`${import.meta.env.VITE_API_URL}/posts`);
-    dispatch(fetchPostsSuccess(response.data));
-  } catch (error:unknown) {
-    dispatch(fetchPostsFail(errorMessage));
-  }
-};
+export default api;

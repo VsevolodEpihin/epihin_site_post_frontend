@@ -1,6 +1,7 @@
-import axios from "axios";
+import { Posts } from '../../types';
 
-export const fetchPostsFromApi = async () => {
-  const response = await axios.get(`${import.meta.env.VITE_API_URL}/postqes`);
-  return response.data;
+import api from './api';
+
+export const fetchPostsRequest = async () => {
+  return await api.get<Posts[]>('posts');
 };
