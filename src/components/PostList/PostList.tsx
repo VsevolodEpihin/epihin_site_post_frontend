@@ -1,44 +1,32 @@
-import notImage from '../../image/no-photo.png';
-import { PostsListProps } from '../../types';
+import { Posts } from '../../types';
+import Post from '../PostItem/PostItem';
 
 import styles from './PostList.module.css';
 
-const PostList: React.FC<PostsListProps> = ({ posts }) => {
-  return(<>
-    <div className={styles.container}>
-      {posts.map(post => (
-        <div
-          key={post.id}
-          className={styles.post}
-        >
-          {(post.imageUrl) ?
-            <img
-              src={post.imageUrl}
-              alt="ImagePost"
+export interface PostsListProps {
+  posts: Posts[],
+}
+
+const PostList = ({ posts }: PostsListProps) => {
+  return(
+    <>
+      <div className={styles.container}>
+        {posts.length === 0
+          ?
+          <div className={styles.boxNotFound}>Not Found Posts</div>
+          :
+          posts.map(post => (
+            <Post
+              key={post.id}
+              title={post.title}
+              text={post.text}
+              imageUrl={post.imageUrl}
+              user={post.user}
+              tags={post.tags}
             />
-            :
-            <img
-              src={notImage}
-              alt="ImagePost"
-              height={400}
-            />}
-          <h2>{post.title}</h2>
-          <p className={styles.textPost}>{post.text}</p>
-          <div className={styles.tagsContainer}>
-            <p>Author: <span>{post.user.login}</span></p>
-            <div>
-              {post.tags.map(tag => (
-                <span
-                  className={styles.tag}
-                  key={tag.id}
-                >{tag.text}</span>
-              ))}
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  </>
+          ))}
+      </div>
+    </>
   );
 };
 

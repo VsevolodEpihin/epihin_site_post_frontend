@@ -1,4 +1,4 @@
-.header{
+.header {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -8,15 +8,16 @@
   background-color: rgb(190, 177, 197);
 }
 
-.nav span{
+.nav span {
   margin: 0 5px;
 }
 
-.nav a{
+.nav a {
   font-size: 18px;
   text-decoration: none;
 }
 
-a:hover{
-color: blueviolet;
+span:hover {
+  color: blueviolet;
+  cursor: pointer;
 }

@@ -1,14 +1,14 @@
-import MainPage from './components/MainPage/MainPage';
-import HeaderPage from './components/HeaderPage/HeaderPage';
-import './normalize.css';
+import MainPage from './pages/MainPage';
+import Header from './components/Header/Header';
+import './App.css';
 
-function App() {
+const App = () => {
   return (
     <>
-      <HeaderPage />
+      <Header />
       <MainPage />
     </>
   );
-}
+};
 
 export default App;

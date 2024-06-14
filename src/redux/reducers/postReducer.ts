@@ -1,31 +1,39 @@
-import { PostsState, PostsActionTypes } from '../actionTypes';
-import { FETCH_POSTS_REQUEST, FETCH_POSTS_FAIL, FETCH_POSTS_SUCCESS } from '../actions/actionPosts';
+import { PostAction, PostsState } from "../../types";
+import {
+  FETCH_POSTS_FAIL,
+  FETCH_POSTS_REQUEST,
+  FETCH_POSTS_SUCCESS,
+} from "../actionTypes";
 
 const initialState: PostsState = {
   posts: [],
-  loading: false,
+  isLoading: false,
   error: null,
 };
 
-const postReducer = (state = initialState, action: PostsActionTypes): PostsState => {
+const postReducer = (state = initialState, action: PostAction): PostsState => {
   switch(action.type) {
     case FETCH_POSTS_REQUEST:
       return {
         ...state,
-        loading: true,
+        isLoading: true,
         error: null
       };
     case FETCH_POSTS_SUCCESS:
       return {
         ...state,
-        loading: false,
-        posts: action.payload,
+        isLoading: false,
+        posts: (action.payload !== undefined && typeof action.payload !== 'string')
+          ?
+          action.payload
+          :
+          initialState.posts,
       };
     case FETCH_POSTS_FAIL:
       return {
         ...state,
-        loading: false,
-        error: action.payload
+        isLoading: false,
+        error: (typeof action.payload === 'string') ? action.payload : initialState.error
       };
     default:
       return state;

@@ -1,0 +1,39 @@
+.post {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 5px;
+  background-color: rgb(228 225 231 / 93%);
+  padding: 25px;
+  border-radius: 15px;
+  width: 40%;
+  margin-top: 150px;
+}
+
+.post img {
+  width: 70%;
+  align-self: center;
+}
+
+.textPost {
+  width: 80%;
+  height: 12%;
+  word-break: break-all;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tagsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tag {
+  background-color: rgb(205 164 249);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+}

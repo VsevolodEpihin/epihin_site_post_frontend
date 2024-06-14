@@ -1,4 +1,4 @@
-.containerError{
+.containerError {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,7 @@
   width: 100%;
 }
 
-.error{
+.error {
   border: 3px solid rgb(136, 0, 248);
   padding: 20px 100px;
   font-size: 24px;

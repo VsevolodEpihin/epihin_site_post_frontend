@@ -1,29 +1,24 @@
-import React from 'react';
 import ClipLoader from 'react-spinners/ClipLoader';
 import Box from '@mui/material/Box';
 
-interface LoaderProps {
-  isLoading: boolean;
-}
+const loaderStyles = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  position: 'absolute',
+  top: '40%',
+  left: '47%',
+};
 
-const Loader: React.FC<LoaderProps> = ({ isLoading }) => {
+const Loader = () => {
   return (
     <>
-
       <Box
         sx={
-          {
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            position: 'absolute',
-            top: '20%',
-            left: '47%',
-          }
+          loaderStyles
         }
       >
         <ClipLoader
-          loading={isLoading}
           size={100}
         />
       </Box>
