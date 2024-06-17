@@ -1,1 +1,1 @@
-export const errorMessage = "Посты не были загружены";
+export const errorMessage = "Posts were not loaded";

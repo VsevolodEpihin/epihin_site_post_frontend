@@ -14,7 +14,6 @@ function* workerPostSaga() {
     const currentError = (error instanceof AxiosError)
       ? error.response?.data?.message
       : errorMessage;
-    console.log(currentError);
     yield put(fetchPostsFail(currentError));
   }
 }
