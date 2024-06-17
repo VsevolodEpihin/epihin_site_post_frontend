@@ -1,6 +1,6 @@
 import notImage from '../../image/no-photo.png';
 import { Tag, User } from '../../types';
-import Tags from '../TagItem/Tag';
+import Tags from '../Tags/Tags';
 
 import styles from './PostItem.module.css';
 
