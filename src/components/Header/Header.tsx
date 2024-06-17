@@ -2,7 +2,7 @@ import logo from '../../image/logo.png';
 
 import styles from './Header.module.css';
 
-const HeaderPage = () => {
+const Header = () => {
   return(
     <>
       <header className={styles.header}>
@@ -23,4 +23,4 @@ const HeaderPage = () => {
   );
 };
 
-export default HeaderPage;
+export default Header;

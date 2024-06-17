@@ -30,7 +30,9 @@ const Post = ({
         <p className={styles.textPost}>{text}</p>
         <div className={styles.tagsContainer}>
           <p>Author: <span>{user.login}</span></p>
+          <div>
           <Tags tags={tags} />
+          </div>
         </div>
       </div>
     </>
