@@ -3,7 +3,7 @@ import { errorMessage } from '../../errorMessage';
 import styles from './ErrorMessage.module.css';
 
 interface ErrorMessageProps {
-  error: string | null ;
+  error: string;
 }
 
 const ErrorMessage = ({ error }: ErrorMessageProps) => {

@@ -1,18 +1,24 @@
 import notImage from '../../image/no-photo.png';
-import { Tags, User } from '../../types';
-import TagItem from '../TagItem/TagItem';
+import { Tag, User } from '../../types';
+import Tags from '../TagItem/Tag';
 
 import styles from './PostItem.module.css';
 
-interface PostsListProps {
+interface PostProps {
   title: string,
   text: string,
   imageUrl: string | null,
   user: User,
-  tags: Tags[]
+  tags: Tag[]
 }
 
-const Post = ({ imageUrl, title, text, user, tags }: PostsListProps) => {
+const Post = ({
+  imageUrl,
+  title,
+  text,
+  user,
+  tags
+} : PostProps) => {
   return(
     <>
       <div className={styles.post}>
@@ -24,14 +30,7 @@ const Post = ({ imageUrl, title, text, user, tags }: PostsListProps) => {
         <p className={styles.textPost}>{text}</p>
         <div className={styles.tagsContainer}>
           <p>Author: <span>{user.login}</span></p>
-          <div>
-            {tags.map(tag => (
-              <TagItem
-                key={tag.id}
-                text={tag.text}
-              />
-            ))}
-          </div>
+          <Tags tags={tags} />
         </div>
       </div>
     </>

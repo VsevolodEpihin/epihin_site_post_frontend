@@ -12,16 +12,15 @@ const loaderStyles = {
 
 const Loader = () => {
   return (
-    <>
-      <Box
-        sx={
-          loaderStyles
-        }
-      >
-        <ClipLoader
-          size={100}
-        />
-      </Box>
+    <><Box
+      sx={
+        loaderStyles
+      }
+    >
+      <ClipLoader
+        size={100}
+      />
+    </Box>
     </>
   );
 };

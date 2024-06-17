@@ -11,7 +11,6 @@ import { useAppSelector, useAppDispatch } from '../hooks/hooks';
 const MainPage = () => {
   const dispatch = useAppDispatch();
   const posts = useAppSelector((state) => state.posts.posts);
-  console.log(posts);
   const isLoading = useAppSelector((state) => state.posts.isLoading);
   const error = useAppSelector((state) => state.posts.error);
 

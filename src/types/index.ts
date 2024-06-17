@@ -5,7 +5,7 @@ export interface User{
   imageUrl:string | null
 }
 
-export interface Tags{
+export interface Tag{
   id: number,
   text: string,
 }
@@ -16,7 +16,7 @@ export interface Posts{
   text: string,
   imageUrl: string | null
   user: User,
-  tags: Tags[]
+  tags: Tag[]
 }
 
 export interface PostsState {

@@ -1,10 +1,4 @@
-import { Posts } from '../../types';
-
 import styles from './PostNotFound.module.css';
-
-export interface PostsListProps {
-  posts: Posts[],
-}
 
 const PostNotFound = () => {
   return(
