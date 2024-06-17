@@ -1,9 +1,9 @@
-import { PostAction, PostsState } from "../../types";
+import { PostAction, PostsState } from '../../types';
 import {
   FETCH_POSTS_FAIL,
   FETCH_POSTS_REQUEST,
   FETCH_POSTS_SUCCESS,
-} from "../actionTypes";
+} from '../actionTypes';
 
 const initialState: PostsState = {
   posts: [],
@@ -24,10 +24,8 @@ const postReducer = (state = initialState, action: PostAction): PostsState => {
         ...state,
         isLoading: false,
         posts: (action.payload !== undefined && typeof action.payload !== 'string')
-          ?
-          action.payload
-          :
-          initialState.posts,
+          ? action.payload
+          : initialState.posts,
       };
     case FETCH_POSTS_FAIL:
       return {

@@ -6,21 +6,16 @@ const loaderStyles = {
   justifyContent: 'center',
   alignItems: 'center',
   position: 'absolute',
-  top: '40%',
-  left: '47%',
+  top: '30%',
+  left: '50%',
 };
 
 const Loader = () => {
   return (
-    <><Box
-      sx={
-        loaderStyles
-      }
-    >
-      <ClipLoader
-        size={100}
-      />
-    </Box>
+    <>
+      <Box sx={loaderStyles}>
+        <ClipLoader size={100} />
+      </Box>
     </>
   );
 };

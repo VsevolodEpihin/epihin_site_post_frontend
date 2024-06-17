@@ -1,4 +1,4 @@
-import { Tag } from "../../types";
+import { Tag } from '../../types';
 
 import styles from './Tags.module.css';
 
@@ -13,7 +13,9 @@ const Tags = ({ tags }: TagsProps) => {
         <span
           key={tag.id}
           className={styles.tag}
-        >{tag.text}</span>
+        >
+          {tag.text}
+        </span>
       ))}
     </>
   );
