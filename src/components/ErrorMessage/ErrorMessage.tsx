@@ -6,11 +6,9 @@ interface ErrorMessageProps {
 
 const ErrorMessage = ({ error }: ErrorMessageProps) => {
   return (
-    <>
       <div className={styles.containerError}>
         <div className={styles.error}>{`Error: ${error}`}</div>
       </div>
-    </>
   );
 };
 

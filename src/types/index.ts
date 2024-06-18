@@ -1,16 +1,16 @@
-export interface User{
+export interface User {
   id: number,
   login: string,
   email: string,
   imageUrl:string | null
 }
 
-export interface Tag{
+export interface Tag {
   id: number,
   text: string,
 }
 
-export interface Posts{
+export interface Posts {
   id: number,
   title: string,
   text: string,

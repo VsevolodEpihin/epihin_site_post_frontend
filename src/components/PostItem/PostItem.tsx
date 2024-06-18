@@ -1,7 +1,7 @@
 import notImage from '../../image/no-photo.png';
 import { Tag, User } from '../../types';
-import Tags from '../Tags/Tags';
 
+import { Tags } from './index'
 import styles from './PostItem.module.css';
 
 interface PostProps {
@@ -20,7 +20,6 @@ const Post = ({
   tags
 } : PostProps) => {
   return(
-    <>
       <div className={styles.post}>
         <img
           src={imageUrl || notImage}
@@ -35,7 +34,6 @@ const Post = ({
           </div>
         </div>
       </div>
-    </>
   );
 };
 

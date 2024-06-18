@@ -2,9 +2,7 @@ import styles from './PostNotFound.module.css';
 
 const PostNotFound = () => {
   return(
-    <>
-      <div className={styles.boxNotFound}>Not Found Posts</div>
-    </>
+    <div className={styles.boxNotFound}>Not Found Posts</div>
   );
 };
 

@@ -1,7 +1,7 @@
 import { Posts } from '../../types';
-import Post from '../PostItem/PostItem';
-import PostNotFound from '../PostNotFound/PostNotFound';
 
+import { PostItem } from './index';
+import { PostNotFound } from './index';
 import styles from './PostList.module.css';
 
 export interface PostsListProps {
@@ -10,11 +10,10 @@ export interface PostsListProps {
 
 const PostList = ({ posts }: PostsListProps) => {
   return(
-    <>
       <div className={styles.container}>
-        {posts.length === 0 &&  <PostNotFound />}
+        {posts.length === 0 && <PostNotFound />}
         {posts.map(post => (
-          <Post
+          <PostItem
             key={post.id}
             title={post.title}
             text={post.text}
@@ -24,7 +23,6 @@ const PostList = ({ posts }: PostsListProps) => {
           />
         ))}
       </div>
-    </>
   );
 };
 

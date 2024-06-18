@@ -1,14 +1,11 @@
-import logo from '../../image/logo.png';
-
 import styles from './Header.module.css';
 
 const Header = () => {
   return(
-    <>
       <header className={styles.header}>
         <div className={styles.logo}>
           <img
-            src={logo}
+            src='./logo.png'
             alt="logo"
             width={60}
           />
@@ -19,7 +16,6 @@ const Header = () => {
           <span>Create Profile</span>
         </nav>
       </header>
-    </>
   );
 };
 
