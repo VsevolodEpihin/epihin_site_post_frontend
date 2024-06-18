@@ -1,4 +1,3 @@
-import notImage from '../../image/no-photo.png';
 import { Tag, User } from '../../types';
 
 import { Tags } from './index'
@@ -22,7 +21,7 @@ const Post = ({
   return(
       <div className={styles.post}>
         <img
-          src={imageUrl || notImage}
+          src={imageUrl || './no-photo.png'}
           alt="ImagePost"
         />
         <h2>{title}</h2>

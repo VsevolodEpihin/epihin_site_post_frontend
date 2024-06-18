@@ -3,10 +3,11 @@ import { useEffect } from 'react';
 import {
   fetchPostsRequest,
 } from '../redux/actions/actionPosts';
-import PostList from '../components/PostList/PostList';
-import Loader from '../components/Loader/Loader';
-import ErrorMessage from '../components/ErrorMessage/ErrorMessage';
 import { useAppSelector, useAppDispatch } from '../hooks/hooks';
+
+import { PostList } from './index';
+import { Loader } from './index';
+import { ErrorMessage } from './index';
 
 const MainPage = () => {
   const dispatch = useAppDispatch();
